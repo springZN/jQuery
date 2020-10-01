@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.costumes {
+    width: 800px;
+    margin: 100px auto;
+}
+
+ul {
+    list-style: none;
+    float: left;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.costumesName {
+    border: 1px solid pink;
+    border-bottom: none;
+}
+
+
+/* 鼠标移动到.costumesName中li上面的时候 添加的类 */
+
+.costumesNow {
+    background-color: pink;
+    color: #fff;
+}
+
+.costumesName li {
+    height: 30px;
+    width: 100px;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px solid pink;
+}
+
+.costumesImg li {
+    display: none;
+}
+
+.costumesImg .now {
+    display: block;
+}
+
+.costumesImg img {
+    height: 278px;
+    border: 1px solid pink;
+    border-left: none;
+}
