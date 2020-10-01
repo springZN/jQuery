@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉菜单</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box {
+            display: flex;
+            justify-content: space-between;
+            width: 600px;
+            height: 30px;
+            margin: 50px auto;
+        }
+        
+        section {
+            position: relative;
+            width: 100px;
+            line-height: 30px;
+            text-align: center;
+            color: #333;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        span:hover {
+            color: orange;
+        }
+        
+        ul {
+            display: none;
+            list-style: none;
+            position: absolute;
+            top: 30px;
+            border: 1px solid orange;
+            border-top: none;
+        }
+        
+        li {
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+        }
+        
+        li:not(:last-child) {
+            border-bottom: 1px solid orange;
+        }
+        
+        a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+        }
+        
+        a:hover {
+            color: orange;
+            background-color: rgba(0, 0, 0, .1);
+        }
+    </style>
+    <script src="./js/jQuery.min.js"></script>
+    <script>
+        $(function() {
+            $('section').hover(function() {
+                $(this).children('ul').stop().slideToggle()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <section>
+            <span>微博</span>
+            <ul>
+                <li>
+                    <a href="javascript:;">私信</a>
+                </li>
+                <li>
+                    <a href="javascript:;">评论</a>
+                </li>
+                <li>
+                    <a href="javascript:;">@我</a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <span>微博</span>
+            <ul>
+                <li>
+                    <a href="javascript:;">私信</a>
+                </li>
+                <li>
+                    <a href="javascript:;">评论</a>
+                </li>
+                <li>
+                    <a href="javascript:;">@我</a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <span>微博</span>
+            <ul>
+                <li>
+                    <a href="javascript:;">私信</a>
+                </li>
+                <li>
+                    <a href="javascript:;">评论</a>
+                </li>
+                <li>
+                    <a href="javascript:;">@我</a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <span>微博</span>
+            <ul>
+                <li>
+                    <a href="javascript:;">私信</a>
+                </li>
+                <li>
+                    <a href="javascript:;">评论</a>
+                </li>
+                <li>
+                    <a href="javascript:;">@我</a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <span>微博</span>
+            <ul>
+                <li>
+                    <a href="javascript:;">私信</a>
+                </li>
+                <li>
+                    <a href="javascript:;">评论</a>
+                </li>
+                <li>
+                    <a href="javascript:;">@我</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
