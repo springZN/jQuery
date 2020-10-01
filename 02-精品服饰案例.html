@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精品服饰</title>
+    <link rel="stylesheet" href="./css/costumes.css">
+</head>
+
+<body>
+    <div class="costumes">
+        <ul class="costumesName">
+            <li>
+                <!-- 一开始 第一个元素就添加costumesNow类 -->
+                <a href="javascript:;" class="costumesNow">女靴</a>
+            </li>
+            <li>
+                <a href="javascript:;">雪地靴</a>
+            </li>
+            <li>
+                <a href="javascript:;">冬裙</a>
+            </li>
+            <li>
+                <a href="javascript:;">呢大衣</a>
+            </li>
+            <li>
+                <a href="javascript:;">毛衣</a>
+            </li>
+            <li>
+                <a href="javascript:;">棉服</a>
+            </li>
+            <li>
+                <a href="javascript:;">女裤</a>
+            </li>
+            <li>
+                <a href="javascript:;">羽绒服</a>
+            </li>
+            <li>
+                <a href="javascript:;">牛仔裤</a>
+            </li>
+        </ul>
+        <ul class="costumesImg">
+            <li class="now">
+                <a href="javascript:;">
+                    <img src="./image/女靴.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./image/雪地靴.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./image/冬裙.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./image/呢大衣.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./image/毛衣.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./image/棉服.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./image/女裤.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./image/羽绒服.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./image/牛仔裤.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script src="./js/jQuery.min.js"></script>
+    <script>
+        $(function() {
+            $('.costumesName li').mouseover(function() {
+                // 让当前.costumesName li中的a添加costumesNow类 让他的其他的所有的兄弟元素中的a移除costumesNow类
+                $(this).find('a').addClass('costumesNow');
+                $(this).siblings().find('a').removeClass('costumesNow');
+                // 使用index()方法获取元素的索引号
+                var index = $(this).index();
+                // 根据索引号让对应的元素显示隐藏
+                $('.costumesImg li').eq(index).show();
+                $('.costumesImg li').eq(index).siblings().hide();
+            })
+        })
+    </script>
+</body>
+
+</html>
