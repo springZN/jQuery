@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>突出显示</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        ul {
+            list-style: none;
+            width: 700px;
+            margin: 100px auto;
+        }
+        
+        li {
+            float: left;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+        
+        img {
+            vertical-align: top;
+        }
+    </style>
+    <script src="./js/jQuery.min.js"></script>
+    <script>
+        $(function() {
+            $('li').hover(function() {
+                // 鼠标移上 将其他的兄弟元素使用渐进方式调整透明度
+                $(this).siblings().stop().fadeTo(300, .5)
+            }, function() {
+                // 鼠标离开就复原
+                $(this).siblings().stop().fadeTo(300, 1)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href=javascript:;>
+                <img src="./image/highlighted1.jpg">
+            </a>
+        </li>
+        <li>
+            <a href=javascript:;>
+                <img src="./image/highlighted2.jpg">
+            </a>
+        </li>
+        <li>
+            <a href=javascript:;>
+                <img src="./image/highlighted3.jpg">
+            </a>
+        </li>
+        <li>
+            <a href=javascript:;>
+                <img src="./image/highlighted4.jpg">
+            </a>
+        </li>
+        <li>
+            <a href=javascript:;>
+                <img src="./image/highlighted5.jpg">
+            </a>
+        </li>
+        <li>
+            <a href=javascript:;>
+                <img src="./image/highlighted6.jpg">
+            </a>
+        </li>
+    </ul>
+</body>
+
+</html>
